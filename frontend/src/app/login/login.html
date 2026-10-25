@@ -1,0 +1,81 @@
+
+<div class="vault-page">
+  <header class="vault-header">
+    <div class="brand">
+      <span class="brand-icon">🔐</span>
+      <span>TrustVault</span>
+    </div>
+    <span class="security-label">Secure Document Management</span>
+  </header>
+
+  <main class="login-layout">
+    <section class="welcome-panel">
+      <p class="eyebrow">YOUR DOCUMENTS. YOUR CONTROL.</p>
+      <h1>Security you can<br>trust.</h1>
+      <p class="welcome-text">
+        Store, manage, and share your documents with controlled access
+        and secure permissions.
+      </p>
+
+      <div class="feature">
+        <span>✓</span>
+        <div>
+          <strong>Access control</strong>
+          <p>Share documents with specific users.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <span>✓</span>
+        <div>
+          <strong>Activity tracking</strong>
+          <p>Keep track of important document actions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="login-card">
+      <div class="card-icon">🔑</div>
+      <h2>Welcome back</h2>
+      <p class="card-description">
+        Sign in to access your secure workspace.
+      </p>
+
+      <form (ngSubmit)="login()">
+        <label for="email">Email address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          [(ngModel)]="email"
+          placeholder="you@example.com"
+          autocomplete="username"
+          required>
+
+        <label for="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          [(ngModel)]="password"
+          placeholder="Enter your password"
+          autocomplete="current-password"
+          required>
+
+        <button type="submit" [disabled]="isLoading">
+          {{ isLoading ? 'Signing in...' : 'Sign in' }}
+        </button>
+      </form>
+
+      <p class="security-note">
+        🔒 Your workspace is designed with security in mind.
+      </p>
+
+      @if (message) {
+        <p role="status" aria-live="polite">{{ message }}</p>
+      }
+    </section>
+  </main>
+
+  <footer>TrustVault · Secure document management</footer>
+</div>

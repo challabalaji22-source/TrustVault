@@ -1,0 +1,218 @@
+
+:host {
+  display: block;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #172033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.vault-page {
+  min-height: 100vh;
+  background: #f4f7fc;
+  display: flex;
+  flex-direction: column;
+}
+
+.vault-header {
+  min-height: 76px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e4e9f2;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 750;
+  color: #183b72;
+}
+
+.brand-icon {
+  font-size: 30px;
+}
+
+.security-label {
+  color: #61708a;
+  font-size: 14px;
+}
+
+.login-layout {
+  flex: 1;
+  width: min(1100px, 90%);
+  margin: 55px auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.welcome-panel {
+  padding: 20px 0;
+}
+
+.eyebrow {
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.welcome-panel h1 {
+  margin: 22px 0;
+  color: #172b4d;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.welcome-text {
+  max-width: 460px;
+  color: #61708a;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.feature > span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #dceafe;
+  color: #1d4ed8;
+  font-weight: 800;
+}
+
+.feature strong {
+  font-size: 15px;
+}
+
+.feature p {
+  margin: 6px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.login-card {
+  padding: 38px;
+  background: #ffffff;
+  border: 1px solid #e6ebf3;
+  border-radius: 18px;
+  box-shadow: 0 16px 45px rgba(31, 53, 89, 0.08);
+}
+
+.card-icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: #eaf1ff;
+  font-size: 24px;
+}
+
+.login-card h2 {
+  margin: 24px 0 8px;
+  font-size: 28px;
+  color: #172b4d;
+}
+
+.card-description {
+  margin: 0 0 28px;
+  color: #718096;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.login-card label {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.login-card input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #d6deeb;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-card input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.login-card button {
+  width: 100%;
+  min-height: 49px;
+  margin-top: 25px;
+  border: 0;
+  border-radius: 8px;
+  background: #9aaac4;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: not-allowed;
+}
+
+.security-note {
+  margin: 22px 0 0;
+  color: #718096;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+footer {
+  padding: 22px;
+  text-align: center;
+  color: #8793a7;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .vault-header {
+    padding: 18px 5%;
+  }
+
+  .security-label {
+    max-width: 125px;
+    text-align: right;
+    font-size: 12px;
+  }
+
+  .login-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 25px auto;
+  }
+
+  .welcome-panel h1 {
+    font-size: 40px;
+  }
+
+  .login-card {
+    padding: 26px;
+  }
+}

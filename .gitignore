@@ -1,0 +1,22 @@
+# Angular and Node generated files
+**/node_modules/
+**/.angular/
+**/dist/
+
+# .NET generated files
+**/bin/
+**/obj/
+
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+**/appsettings.Development.json
+**/secrets.json
+
+# User-specific files
+*.user
+*.suo
+**/dist/
+# Uploaded document files — keep user data out of GitHub
+/backend/TrustVault.Api/Storage/*.bin
